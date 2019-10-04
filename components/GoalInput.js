@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
+import GoalItem from './GoalItem';
 
 
 const GoalInput = props => {
@@ -37,3 +38,5 @@ const styles = StyleSheet.create({
         padding: 10
     }
 });
+
+export default GoalInput;
