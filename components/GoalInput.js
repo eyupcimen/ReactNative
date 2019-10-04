@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         width: '80%'
     },
     button: {
-        backgroundColor: 'green',
+        backgroundColor: 'white',
         width: '40%'
     }
 });

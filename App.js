@@ -8,13 +8,22 @@ export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
   const [isAddMode, setIsAddMode] = useState(false);
 
+  console.log('RE-RENDERING COMPONENT' + courseGoals);
+  console.log(courseGoals);
+
   const addGoalHandler = goalTitle => {
+    if (goalTitle.length === 0) {
+      return;
+    }
     setCourseGoals(currentGoals => [...currentGoals, { id: Math.random().toString(), value: goalTitle }
     ]);
     setIsAddMode(false);
   };
 
+
   const removeGoalHandler = goalId => {
+    console.log('TO BE DELETE goal id' + goalId);
+    console.log(courseGoals);
     setCourseGoals(currentGoals => {
       return currentGoals.filter((goal) => goal.id != goalId);
     });
@@ -53,9 +62,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: 50,
     padding: 10
-  },
-  buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
   }
 });
